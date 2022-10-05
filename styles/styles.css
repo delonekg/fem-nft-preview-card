@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /* Primary Colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral Colors */
+    --background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font */
+    --font: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--background);
+}
+
+#card {
+    background-color: var(--card-background);
+    width: 21.875rem;
+    height: 38.75rem;
+    padding: 1.5625rem 1.5625rem 2.1875rem 1.5625rem;
+    border-radius: 0.9375rem;
+    box-shadow: -1px 9px 21px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 9px 21px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 21px -4px rgba(0,0,0,0.75);
+}
+
+#nft-preview-button {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+}
+
+#eye-icon {
+    opacity: 0;
+    background-color: hsla(178, 100%, 50%, 0.489);
+    position: absolute;
+    left: 38.7188rem;
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-top: 135px;
+    padding-bottom: 7.3125rem;
+    border-radius: 0.625rem;
+    transition: opacity 0.2s, cursor 0.2s;
+}
+
+#nft-image {
+    width: 18.75rem;
+    height: 18.75rem;
+    border-radius: 0.625rem;
+}
+
+h1 {
+    font-family: var(--font);
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 1.5625rem;
+    margin-bottom: 1.5625rem;
+    transition: color 0.2s, cursor 0.2s;
+}
+
+#description {
+    font-family: var(--font);
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--soft-blue);
+    margin-bottom: 1.875rem;
+}
+
+#selling-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+}
+
+#selling-info img {
+    vertical-align: middle;
+}
+
+#price {
+    display: inline;
+    vertical-align: middle;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+#duration {
+    display: inline;
+    vertical-align: middle;
+    font-family: var(--font);
+    font-weight: 400;
+    color: var(--soft-blue);
+}
+
+hr {
+    color: var(--line-color);
+    margin-bottom: 0.9375rem;
+}
+
+#author-info p {
+    display: inline;
+}
+
+#avatar {
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: solid 0.0625rem;
+    border-radius: 100%;
+    border-color: var(--white);
+    margin-right: 0.9375rem;
+}
+
+#author-info p {
+    vertical-align: middle;
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+#author {
+    color: var(--white);
+    transition: color 0.2s, cursor 0.2s;
+}
+
+/* Active States */
+#eye-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+h1:hover, #author:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
